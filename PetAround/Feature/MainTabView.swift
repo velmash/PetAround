@@ -28,12 +28,12 @@ struct MainTabView: View {
     
     var body: some View {
         TabView {
-            ContentView()
+            TrackingView()
                 .tabItem {
                     Label("View A", systemImage: "star.fill")
                 }
             
-            ContentViewB()
+            SettingView()
                 .tabItem {
                     Label("View B", systemImage: "moon.fill")
                 }

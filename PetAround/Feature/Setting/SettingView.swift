@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentViewB: View {
+struct SettingView: View {
     var body: some View {
         VStack {
             Image(systemName: "moon.fill")
@@ -20,5 +20,5 @@ struct ContentViewB: View {
 }
 
 #Preview {
-    ContentViewB()
+    SettingView()
 }
