@@ -13,25 +13,26 @@ struct SettingView: View {
     var body: some View {
         ZStack {
             Color(.bg)
-                .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea(.all)
             
             ScrollView {
                 VStack(spacing: 50) {
-                    NavigationLink(destination: ContentViewA()) {
+                    NavigationLink(destination: LoginView()) {
                         SettingItemView(item: viewModel.settingItems[0])
                             .frame(height: 50)
                     }
-                    NavigationLink(destination: ContentViewA()) {
+                    NavigationLink(destination: LoginView()) {
                         SettingItemView(item: viewModel.settingItems[0])
                             .frame(height: 50)
                     }
-                    NavigationLink(destination: ContentViewA()) {
+                    NavigationLink(destination: LoginView()) {
                         SettingItemView(item: viewModel.settingItems[0])
                             .frame(height: 50)
                     }
                 }
-                
+                .buttonStyle(PlainButtonStyle())
             }
+            .padding(.top, 1)
         }
     }
 }
@@ -44,7 +45,7 @@ struct SettingItemView: View {
             Image(systemName: item.icon)
             Text(item.title)
             Spacer()
-            Image(systemName: "greaterthan")
+            Image(systemName: "chevron.right")
         }
         .padding(.horizontal, 16)
     }
