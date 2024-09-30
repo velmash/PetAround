@@ -16,43 +16,32 @@ struct SettingView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
-                VStack(spacing: 50) {
+                VStack(spacing: 20) {
+                    Spacer()
+                    
+                    Text("설정")
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Spacer()
+                    
                     NavigationLink(destination: LoginView()) {
-                        SettingItemView(item: viewModel.settingItems[0])
-                            .frame(height: 50)
+                        LoginInfoView()
                     }
-                    NavigationLink(destination: LoginView()) {
-                        SettingItemView(item: viewModel.settingItems[0])
-                            .frame(height: 50)
-                    }
-                    NavigationLink(destination: LoginView()) {
-                        SettingItemView(item: viewModel.settingItems[0])
-                            .frame(height: 50)
+                    
+                    NavigationLink(destination: PetConfigView()) {
+                        PetinfoView()
                     }
                 }
                 .buttonStyle(PlainButtonStyle())
             }
             .padding(.top, 1)
+            .padding(.horizontal, 10)
         }
-    }
-}
-
-struct SettingItemView: View {
-    var item: SettingItem
-    
-    var body: some View {
-        HStack(alignment: .center) {
-            Image(systemName: item.icon)
-            Text(item.title)
-            Spacer()
-            Image(systemName: "chevron.right")
-        }
-        .padding(.horizontal, 16)
     }
 }
 
 #Preview {
     SettingView()
         .environmentObject(SettingViewModel())
-//    SettingItemView(item: SettingItem(icon: "person.fill", title: "로그인"))
 }
