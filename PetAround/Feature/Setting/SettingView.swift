@@ -16,13 +16,21 @@ struct SettingView: View {
                 .edgesIgnoringSafeArea(.top)
             
             ScrollView {
-                VStack {
-                    ForEach(viewModel.settingItems, id: \.id) { item in
-                        SettingItemView(item: item)
-                            .frame(height: 30)
+                VStack(spacing: 50) {
+                    NavigationLink(destination: ContentViewA()) {
+                        SettingItemView(item: viewModel.settingItems[0])
+                            .frame(height: 50)
+                    }
+                    NavigationLink(destination: ContentViewA()) {
+                        SettingItemView(item: viewModel.settingItems[0])
+                            .frame(height: 50)
+                    }
+                    NavigationLink(destination: ContentViewA()) {
+                        SettingItemView(item: viewModel.settingItems[0])
+                            .frame(height: 50)
                     }
                 }
-                .padding(.top, 20)
+                
             }
         }
     }
