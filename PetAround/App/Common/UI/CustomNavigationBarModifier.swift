@@ -16,7 +16,7 @@ struct CustomNavigationBarModifier: ViewModifier {
             HStack {
                 Button(action: action) {
                     Image(systemName: "chevron.left")
-                        .foregroundStyle(Color.mainDarkColor)
+                        .foregroundStyle(Color(.mainDark))
                         .frame(width: 50, height: 50)
                 }
                 Spacer()
