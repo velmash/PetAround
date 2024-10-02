@@ -10,7 +10,7 @@ import SwiftUI
 struct TrackingView: View {
     var body: some View {
         ZStack {
-            Color(.bg)
+            Color.bgColor
                 .edgesIgnoringSafeArea(.top)
             
             VStack {
