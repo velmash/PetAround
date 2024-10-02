@@ -12,8 +12,8 @@ struct SettingView: View {
     
     var body: some View {
         ZStack {
-            Color.bgColor
-                .edgesIgnoringSafeArea(.all)
+            Color(.bg)
+                .edgesIgnoringSafeArea(.top)
             
             ScrollView {
                 VStack(spacing: 20) {
