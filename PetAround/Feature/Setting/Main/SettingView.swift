@@ -36,7 +36,7 @@ struct SettingView: View {
                 .buttonStyle(PlainButtonStyle())
             }
             .padding(.top, 1)
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 20)
         }
     }
 }
